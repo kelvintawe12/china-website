@@ -1,0 +1,7 @@
+{
+    "about": { "bio": "Viola China is a sales professional...", "interests": "Entrepreneurship..." },
+    "timeline": [{ "year": 2019, "title": "High School Diploma", "description": "Kisubi Mapeera..." }],
+    "projects": [{ "title": "Africa Essay Competition 2024", "description": "Second runner-up..." }],
+    "skills": ["Communication", "Customer Service", "Sales", "Multilingual (English, Luganda, Arabic)"],
+    "contact": { "email": "chinavioliny@gmail.com", "phone": "+256-123-456-789", "linkedin": "https://linkedin.com/in/violachina" }
+  }
