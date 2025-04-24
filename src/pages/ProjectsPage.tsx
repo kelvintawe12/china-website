@@ -18,8 +18,32 @@ const projects = [{
   category: 'Professional',
   image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80',
   link: '#'
+},
+{
+  id: 3,
+  title: 'E-Commerce Platform',
+  description: 'A scalable e-commerce platform with user authentication, product management, and payment gateway integration.',
+  technologies: ['React', 'Redux', 'Firebase'],
+  category: 'Professional',
+  image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80',
+  link: '#'
+}, {
+  id: 4,
+  title: 'Portfolio Website',
+  description: 'A personal portfolio website showcasing projects, skills, and contact information.',
+  technologies: ['Next.js', 'Tailwind CSS'],
+  category: 'Personal',
+  image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80',
+  link: '#'
+}, {
+  id: 5,
+  title: 'Open Source Contribution Tracker',
+  description: 'A tool to track and visualize open source contributions across multiple repositories.',
+  technologies: ['Vue.js', 'D3.js', 'Node.js'],
+  category: 'Open Source',
+  image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80',
+  link: '#'
 }
-// Add more projects as needed
 ];
 const ProjectsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
