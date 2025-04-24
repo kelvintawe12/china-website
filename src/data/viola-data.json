@@ -1,7 +1,95 @@
 {
-    "about": { "bio": "Viola China is a sales professional...", "interests": "Entrepreneurship..." },
-    "timeline": [{ "year": 2019, "title": "High School Diploma", "description": "Kisubi Mapeera..." }],
-    "projects": [{ "title": "Africa Essay Competition 2024", "description": "Second runner-up..." }],
-    "skills": ["Communication", "Customer Service", "Sales", "Multilingual (English, Luganda, Arabic)"],
-    "contact": { "email": "chinavioliny@gmail.com", "phone": "+256-123-456-789", "linkedin": "https://linkedin.com/in/violachina" }
-  }
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "The Future of Insurance in Africa",
+      "excerpt": "Exploring <b>emerging trends</b> and opportunities in the African insurance market...",
+      "content": "Full article content here...",
+      "date": "2024-03-15",
+      "readTime": "5 min read",
+      "category": "Insurance",
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Building Customer Relations in the Digital Age",
+      "excerpt": "How to maintain personal connections while leveraging <a href='#'>digital tools</a>...",
+      "content": "Full article content here...",
+      "date": "2024-03-10",
+      "readTime": "4 min read",
+      "category": "Business",
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Insurance Solutions Platform",
+      "description": "A comprehensive platform for managing insurance policies and claims...",
+      "technologies": ["React", "Node.js", "MongoDB"],
+      "category": "Professional",
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80",
+      "link": "#",
+      "featured": true,
+      "github": "https://github.com/violachina/insurance-platform"
+    },
+    {
+      "id": 2,
+      "title": "Customer Relations Dashboard",
+      "description": "Interactive dashboard for tracking and managing customer relationships...",
+      "technologies": ["React", "TypeScript", "Chart.js"],
+      "category": "Professional",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80",
+      "link": "#"
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "title": "Africa Essay Competition 2024",
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80",
+      "year": 2024,
+      "event": "Essay Competition",
+      "caption": "Viola at the Namibia event"
+    },
+    {
+      "id": 2,
+      "title": "Insurance Summit 2023",
+      "image": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
+      "year": 2023,
+      "event": "Summit",
+      "caption": "Speaking at the summit"
+    }
+  ],
+  "contact": {
+    "email": "chinavioliny@gmail.com",
+    "phone": "+256-123-456-789",
+    "linkedin": "https://linkedin.com/in/violachina",
+    "twitter": "https://twitter.com/violachina",
+    "location": "Kampala, Uganda"
+  },
+  "experience": [
+    {
+      "year": 2022,
+      "title": "Sales Manager",
+      "company": "Icea Lion Group",
+      "description": "Led a team of 10 sales agents..."
+    },
+    {
+      "year": 2020,
+      "title": "Customer Relations Officer",
+      "company": "Multi-Choice",
+      "description": "Managed client accounts..."
+    }
+  ],
+  "education": [
+    {
+      "year": 2019,
+      "title": "High School Diploma",
+      "institution": "Kisubi Mapeera",
+      "description": "Graduated with honors..."
+    }
+  ],
+  "resume": "https://example.com/viola-china-resume.pdf"
+}
