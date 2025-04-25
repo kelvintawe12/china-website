@@ -19,6 +19,14 @@ interface BlogPost {
 }
 
 const BlogPage: React.FC = () => {
+  if (!Array.isArray(violaData.blogPosts)) {
+    return (
+      <div className="py-20 px-4 text-center text-white">
+        No blog posts available.
+      </div>
+    );
+  }
+
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [page, setPage] = useState<number>(1);
