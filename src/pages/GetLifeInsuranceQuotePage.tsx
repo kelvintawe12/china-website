@@ -10,11 +10,29 @@ const GetLifeInsuranceQuotePage = () => {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e) => {
+
+  interface ChangeEvent {
+    target: {
+      name: string;
+      value: string;
+    };
+  }
+
+  const handleChange = (e: ChangeEvent) => {
     setFormData({...formData, [e.target.name]: e.target.value});
   };
 
-  const handleSubmit = (e) => {
+  interface FormData {
+    name: string;
+    age: string;
+    coverageAmount: string;
+    email: string;
+    phone: string;
+  }
+
+  interface SubmitEvent extends React.FormEvent<HTMLFormElement> {}
+
+  const handleSubmit = (e: SubmitEvent) => {
     e.preventDefault();
     // Here you would handle form submission, e.g., send data to API
     setSubmitted(true);

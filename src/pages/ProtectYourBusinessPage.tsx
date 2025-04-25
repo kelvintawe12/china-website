@@ -10,11 +10,26 @@ const ProtectYourBusinessPage = () => {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e) => {
+  interface FormData {
+    businessName: string;
+    contactPerson: string;
+    email: string;
+    phone: string;
+    coverageType: string;
+  }
+
+  interface ChangeEvent {
+    target: {
+      name: string;
+      value: string;
+    };
+  }
+
+  const handleChange = (e: ChangeEvent) => {
     setFormData({...formData, [e.target.name]: e.target.value});
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     // Handle form submission logic here
     setSubmitted(true);

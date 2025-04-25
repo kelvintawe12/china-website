@@ -27,7 +27,11 @@ const BlogPage: React.FC = () => {
 
   // Dynamic categories
   const categories = useMemo(() => {
-    const uniqueCategories = new Set(violaData.blogPosts.map((post: BlogPost) => post.category));
+    const uniqueCategories = new Set(
+      violaData.blogPosts
+        .filter((post): post is BlogPost => post.featured !== undefined)
+        .map((post: BlogPost) => post.category)
+    );
     return ['All', ...Array.from(uniqueCategories)];
   }, []);
 

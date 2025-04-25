@@ -7,12 +7,20 @@ import ExperiencePage from '../pages/ExperiencePage';
 import GalleryPage from '../pages/GalleryPage';
 import ProjectsPage from '../pages/ProjectsPage';
 import BlogPage from '../pages/BlogPage';
+import BookFreeMeetingPage from '../pages/BookFreeMeetingPage';
+import GetLifeInsuranceQuotePage from '../pages/GetLifeInsuranceQuotePage';
+import ProtectYourBusinessPage from '../pages/ProtectYourBusinessPage';
 import ContactPage from '../pages/ContactPage';
 const AppRoutes = () => {
   return <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
+          <Route path="book-free-meeting" element={<BookFreeMeetingPage />} />
+          <Route path="get-life-insurance-quote" element={<GetLifeInsuranceQuotePage />} />
+          <Route path="protect-your-business" element={<ProtectYourBusinessPage />} />
+          {/* Nested routes */}
+
           <Route path="about" element={<AboutPage />} />
           <Route path="experience" element={<ExperiencePage />} />
           <Route path="gallery" element={<GalleryPage />} />
