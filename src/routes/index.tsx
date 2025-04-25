@@ -19,8 +19,6 @@ const AppRoutes = () => {
           <Route path="book-free-meeting" element={<BookFreeMeetingPage />} />
           <Route path="get-life-insurance-quote" element={<GetLifeInsuranceQuotePage />} />
           <Route path="protect-your-business" element={<ProtectYourBusinessPage />} />
-          {/* Nested routes */}
-
           <Route path="about" element={<AboutPage />} />
           <Route path="experience" element={<ExperiencePage />} />
           <Route path="gallery" element={<GalleryPage />} />
