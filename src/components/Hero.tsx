@@ -48,7 +48,7 @@ const Hero = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.05, boxShadow: '0 0 15px rgba(255,111,97,0.5)' }}
             whileTap={{ scale: 0.98 }}
-            onClick={() => handleClick('/life-insurance')}
+            onClick={() => handleClick('/get-life-insurance-quote')}
           >
             Get a Life Insurance Quote
           </motion.button>
@@ -57,7 +57,7 @@ const Hero = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.05, boxShadow: '0 0 15px rgba(72,187,120,0.5)' }}
             whileTap={{ scale: 0.98 }}
-            onClick={() => handleClick('/general-insurance')}
+            onClick={() => handleClick('/get-general-insurance')}
           >
             Protect Your Business
           </motion.button>
@@ -66,7 +66,7 @@ const Hero = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.05, boxShadow: '0 0 15px rgba(37,99,235,0.5)' }}
             whileTap={{ scale: 0.98 }}
-            onClick={() => handleClick('/meeting-scheduler')}
+            onClick={() => handleClick('/book-free-meeting')}
           >
             Book a Free Meeting
           </motion.button>
