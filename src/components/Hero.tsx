@@ -12,9 +12,9 @@ const Hero: React.FC = () => {
   // Slideshow state
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    '/images/professional-office.jpg',
-    '/images/insurance-meeting.jpg',
-    '/images/client-handshake.jpg',
+    'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg',
+    'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg',
+    'https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg',
   ];
 
   useEffect(() => {
@@ -131,16 +131,16 @@ const Hero: React.FC = () => {
           className="space-y-8"
         >
           {/* Profile Image */}
-          <motion.div
+            <motion.div
             variants={itemVariants}
             className="w-24 h-24 rounded-full bg-gray-300 mx-auto overflow-hidden"
-          >
+            >
             <img
-              src="/path-to-profile-image.jpg"
+              src="https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg"
               alt="Viola China"
               className="object-cover w-full h-full"
             />
-          </motion.div>
+            </motion.div>
 
           {/* Name and Title */}
           <motion.h1

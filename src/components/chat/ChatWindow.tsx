@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Send, Trash2 } from 'lucide-react';
 import DOMPurify from 'dompurify';
-import violaData from '../../data/viola-data.json';
+// import violaData from '../../data/viola-data.json';
 
 interface Message {
   id: number;

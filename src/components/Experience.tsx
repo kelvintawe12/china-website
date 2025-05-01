@@ -38,7 +38,32 @@ const Experience = () => {
       }
     }
   };
-  const cardVariants = index => ({
+  interface ExperienceItem {
+    title: string;
+    company: string;
+    location: string;
+    period: string;
+    description: string;
+  }
+
+  interface CardVariants {
+    [key: string]: {
+      opacity?: number;
+      x?: number;
+      scale?: number;
+      rotate?: number;
+      color?: string;
+      transition?: {
+        duration?: number;
+        ease?: string;
+        type?: string;
+        stiffness?: number;
+        damping?: number;
+      };
+    };
+  }
+
+  const cardVariants = (index: number): CardVariants => ({
     hidden: {
       opacity: 0,
       x: index % 2 === 0 ? -50 : 50

@@ -35,7 +35,7 @@ const Gallery = () => {
     triggerOnce: true
   });
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<null | typeof galleryData[0]>(null);
   const [layout, setLayout] = useState<'grid' | 'columns'>('grid');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const filteredImages = selectedCategory === 'All' ? galleryData : galleryData.filter(item => item.category === selectedCategory);
@@ -162,15 +162,25 @@ const Gallery = () => {
             <p className="text-gray-400">No items found in this category.</p>
           </motion.div>}
         {/* Modal */}
-        {selectedImage && <GalleryModal image={selectedImage} onClose={() => setSelectedImage(null)} images={filteredImages} onNext={() => {
-        const currentIndex = filteredImages.findIndex(img => img.id === selectedImage.id);
-        const nextIndex = (currentIndex + 1) % filteredImages.length;
-        setSelectedImage(filteredImages[nextIndex]);
-      }} onPrev={() => {
-        const currentIndex = filteredImages.findIndex(img => img.id === selectedImage.id);
-        const prevIndex = (currentIndex - 1 + filteredImages.length) % filteredImages.length;
-        setSelectedImage(filteredImages[prevIndex]);
-      }} />}
+        {selectedImage && (
+          <GalleryModal
+            image={selectedImage}
+            onClose={() => setSelectedImage(null)}
+            images={filteredImages}
+            onNext={() => {
+              setSelectedImage((prev) => {
+                const currentIndex = filteredImages.findIndex((img) => img.id === prev?.id);
+                return filteredImages[(currentIndex + 1) % filteredImages.length];
+              });
+            }}
+            onPrev={() => {
+              setSelectedImage((prev) => {
+                const currentIndex = filteredImages.findIndex((img) => img.id === prev?.id);
+                return filteredImages[(currentIndex - 1 + filteredImages.length) % filteredImages.length];
+              });
+            }}
+          />
+        )}
       </div>
     </section>;
 };
