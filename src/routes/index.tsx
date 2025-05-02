@@ -16,15 +16,15 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="book-free-meeting" element={<BookFreeMeetingPage />} />
-          <Route path="get-life-insurance-quote" element={<GetLifeInsuranceQuotePage />} />
-          <Route path="protect-your-business" element={<ProtectYourBusinessPage />} />
-          <Route path="about" element={<AboutPage />} />
-          <Route path="experience" element={<ExperiencePage />} />
-          <Route path="gallery" element={<GalleryPage />} />
-          <Route path="projects" element={<ProjectsPage />} />
-          <Route path="blog" element={<BlogPage />} />
-          <Route path="contact" element={<ContactPage />} />
+          <Route path="/book-free-meeting" element={<BookFreeMeetingPage />} />
+          <Route path="/get-life-insurance-quote" element={<GetLifeInsuranceQuotePage />} />
+          <Route path="/protect-your-business" element={<ProtectYourBusinessPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
