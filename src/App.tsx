@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import ErrorBoundary from './pages/ErrorBoundary';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ExperiencePage from './pages/ExperiencePage';
@@ -14,7 +15,11 @@ import ContactPage from './pages/ContactPage';
 const App = () => {
   return <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={
+          <ErrorBoundary fallback={<div className="text-center text-red-500 p-8">Failed to load page. Please try again later.</div>}>
+            <Layout />
+          </ErrorBoundary>
+        }>
           <Route index element={<HomePage />} />
           <Route path="/book-free-meeting" element={<BookFreeMeetingPage />} />
           <Route path="/get-life-insurance-quote" element={<GetLifeInsuranceQuotePage />} />

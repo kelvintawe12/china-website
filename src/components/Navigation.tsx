@@ -123,7 +123,7 @@ const Navigation: React.FC = () => {
       ref={navRef}
       className={`fixed w-full z-50 px-4 sm:px-6 py-3 transition-all duration-300 ${
         scrolled ? 'bg-navy-900/95 backdrop-blur-md shadow-lg scale-95' : 'bg-navy-900'
-      } ${isOpen ? 'bg-navy-900' : ''}`}
+      } ${isOpen ? 'bg-gray-900' : ''}`}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 100, damping: 20 }}
@@ -220,21 +220,21 @@ const Navigation: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-navy-900 lg:hidden pt-20 pb-4 overflow-y-auto"
-            initial={{ opacity: 0, y: -20 }}
+            className="fixed inset-0 bg-gray-900 lg:hidden pt-20 pb-4 overflow-y-auto"
+            initial={{ opacity: 0, y: '-100%' }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, type: 'spring', stiffness: 150 }}
+            exit={{ opacity: 0, y: '-100%' }}
+            transition={{ duration: 0.4, ease: 'easeInOut' }}
           >
-            <div className="flex flex-col p-4 sm:p-6 space-y-2 max-h-[calc(100vh-5rem)]">
+          <div className="flex flex-col p-4 sm:p-6 space-y-2 max-h-[calc(100vh-5rem)] text-white">
               {memoizedNavLinks.map((link, index) => (
                 <div key={link.name}>
                   <motion.div
-                    className={`flex justify-between items-center py-3 px-4 rounded-lg transition-colors ${
-                      activeSection === link.href.substring(1)
-                        ? 'bg-coral-500 text-white'
-                        : 'text-white hover:bg-coral-500/20'
-                    }`}
+                className={`flex justify-between items-center py-3 px-4 rounded-lg transition-colors ${
+                  activeSection === link.href.substring(1)
+                    ? 'bg-coral-500 text-white'
+                    : 'text-white hover:bg-coral-500/20'
+                }`}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{
                       opacity: 1,
@@ -244,7 +244,7 @@ const Navigation: React.FC = () => {
                   >
                     <Link
                       to={link.href}
-                      className="text-lg"
+                      className="text-lg text-white"
                       onClick={() => handleNavClick(link.href)}
                     >
                       {link.name}
@@ -292,7 +292,7 @@ const Navigation: React.FC = () => {
               ))}
               {/* Mobile Theme Toggle and Social Links */}
               <motion.div
-                className="pt-4 border-t border-navy-700 flex justify-between items-center"
+                className="pt-4 border-t border-navy-700 flex justify-between items-center text-white"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, type: 'spring' }}
